@@ -39,7 +39,7 @@ public class Call_Recorder_Service extends Service {
 		Calendar c = Calendar.getInstance(); 
 		int seconds = c.get(Calendar.SECOND);
 				
-		SimpleDateFormat sdf = new SimpleDateFormat("dd MM yyyy_HH mm ss");
+		SimpleDateFormat sdf = new SimpleDateFormat("dd MM yyyy_HHS mm ss");
 		String currentDateandTime = sdf.format(new Date());
 
 		Audio_Recorder_Class ar = new Audio_Recorder_Class(currentDateandTime);
@@ -113,7 +113,6 @@ public class Call_Recorder_Service extends Service {
 
 	@Override
 	public IBinder onBind(Intent arg0) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 

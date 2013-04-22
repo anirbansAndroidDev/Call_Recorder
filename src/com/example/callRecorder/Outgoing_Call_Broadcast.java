@@ -32,7 +32,6 @@ public class Outgoing_Call_Broadcast extends BroadcastReceiver{
 
 	String incoming_nr;
 	int outgoing;
-	private int prev_state;
 	static MediaRecorder recorder_out;
 	File audiofile;
 	static String pass_phone_no="no_number";
@@ -66,12 +65,9 @@ public class Outgoing_Call_Broadcast extends BroadcastReceiver{
 
 			Log.i("OutgoingCallReceiver",phonenumber);
 			Log.i("OutgoingCallReceiver",bundle.toString());
-
-
-
 			Log.i("OutgoingCallReceiver","State: "+ state);
 
-
+			Toast.makeText(context,"Phone No" + phonenumber, 10000).show();
 
 			//testing ends
 
@@ -89,7 +85,6 @@ public class Outgoing_Call_Broadcast extends BroadcastReceiver{
 			}
 			else
 			{
-				// Sorry
 				Toast.makeText(context, "SD Card NOT Mounted Recordings will not be saved", 10000).show();
 			}
 		}
